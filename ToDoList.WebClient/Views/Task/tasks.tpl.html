@@ -1,0 +1,18 @@
+﻿<div class="col-md-9 col-lg-9" ng-init="showDiv=false">
+    <div class="tab-content">
+        <div role="tabpanel" class="tab-pane active" id="personal">
+            <div class="inner-tab-pane">
+                <h2>Tasks</h2>
+                <ul ng-repeat="t in tasks">
+                    <li>Project Name : {{t.ProjectName}}</li> 
+                    <li>Task Name :{{t.TaskName}}</li>
+                    <li>Due Date :{{t.Duedate | date}}</li>
+                    <li>Priority :{{t.Priority}}</li>
+                    <li>Completed :{{t.IsCompleted}}</li>
+                    <li><a class="btn btn-primary" href="/#/taskdetail/{{t.TaskId}}">Edit</a> | <a ng-click="deleteTask(t)" class=" btn btn-primary" href="javascript:void(0)" >Delete</a></li>
+                </ul>
+            </div>
+        </div>
+    </div>
+
+</div>
